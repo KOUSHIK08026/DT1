@@ -1,114 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hexagon Grid</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div id="mainimg" id="outer">
-      <svg viewBox="0 0 500 500">
+  <div id="mainimg">
+    <svg viewBox="0 0 500 500">
+        
+        <!-- Edge Bridges (connecting inner points to outer) -->
+      <line x1="360" y1="59.48" x2="326" y2="123" stroke="white" stroke-width="2"/> <!-- Top right bridge -->
+      <line x1="178" y1="124" x2="206" y2="174" stroke="white" stroke-width="2"/> <!-- Top left bridge -->
+      <line x1="30"  y1="250"  x2="100" y2="250" stroke="white" stroke-width="2"/> <!-- Mid left bridge -->
+      <line x1="400" y1="250"  x2="343" y2="250" stroke="white" stroke-width="2"/> <!-- Mid right bridge -->
+      <line x1="178" y1="376"  x2="206" y2="326" stroke="white" stroke-width="2"/> <!-- Bottom left bridge -->
+      <line x1="360" y1="440.52" x2="326" y2="377" stroke="white" stroke-width="2"/> <!-- Bottom right bridge -->
 
-            <!-- tr  -->
-          <line x1="360" y1="59.48" x2="326" y2="123" stroke="white" stroke-width="2"></line>
-            <!-- tl -->
-          <line x1="178" y1="124" x2="206" y2="174" stroke="white" stroke-width="2"></line>
-            <!-- ml  -->
-          <line x1="30" y1="250" x2="100" y2="250" stroke="white" stroke-width="2"></line>
-            <!-- mr  -->
-          <line x1="400" y1="250" x2="330" y2="250" stroke="white" stroke-width="2"></line>
-            <!-- bl  -->
-          <line x1="178" y1="376" x2="206" y2="326" stroke="white" stroke-width="2"></line>
-            <!-- br  -->
-          <line x1="360" y1="440.52" x2="326" y2="377" stroke="white" stroke-width="2"></line>
-            <!-- mid -->
+      <!-- ===== OUTER HEXAGON ===== -->
+      <!-- Outer Connecting Lines -->
+      <line x1="140" y1="59.48" x2="360" y2="59.48" stroke="white" stroke-width="2"/> <!-- Top edge -->
+      <line x1="140" y1="440.52" x2="360" y2="440.52" stroke="white" stroke-width="2"/> <!-- Bottom edge -->
+      <line x1="360" y1="59.48" x2="470" y2="250" stroke="white" stroke-width="2"/>
+      <line x1="470" y1="250" x2="360" y2="440.52" stroke="white" stroke-width="2"/>
+      <line x1="140" y1="59.48" x2="30"  y2="250" stroke="white" stroke-width="2"/>
+      <line x1="30"  y1="250" x2="140" y2="440.52" stroke="white" stroke-width="2"/>
 
-            <!-- <line x1="30" y1="250" x2="470" y2="250" stroke="white" stroke-width="2"></line>  -->
+      <!-- Outer Circles -->
+      <circle cx="140" cy="59.48" r="15" class="circ"/>    <!-- Outer Top Left -->
+      <circle cx="360" cy="59.48" r="15" class="circ"/>    <!-- Outer Top Right -->
+      <circle cx="30"  cy="250"  r="15" class="circ"/>     <!-- Outer Mid Left -->
+      <circle cx="470" cy="250"  r="15" class="circ"/>     <!-- Outer Mid Right -->
+      <circle cx="140" cy="440.52" r="15" class="circ"/>   <!-- Outer Bottom Left -->
+      <circle cx="360" cy="440.52" r="15" class="circ"/>   <!-- Outer Bottom Right -->
 
-            <!-- up -->
-            <line x1="140" y1="59.48" x2="360" y2="59.48" stroke="white" stroke-width="2"></line>
-            <!-- down -->
-            <line x1="140" y1="440.52" x2="360" y2="440.52" stroke="white" stroke-width="2"></line>
-
-            <line  x1="360" y1="440.52" x2="470" y2="250" stroke="white" stroke-width="2"></line>
-            <line  x1="30" y1="250" x2="140" y2="440.52" stroke="white" stroke-width="2"></line>
-            <line  x1="30" y1="250" x2="140" y2="59.48" stroke="white" stroke-width="2"></line>
-            <line  x1="360" y1="59.48" x2="470" y2="250"  stroke="white" stroke-width="2"></line>
-            <!-- up left -->
-            <circle cx="140" cy="59.48" r="15" id="circ"></circle>
-            <!-- up rig -->
-            <circle cx="360" cy="59.48" r="15" id="circ"></circle>
-            <!-- mid left -->
-            <circle cx="30" cy="250" r="15" id="circ"></circle>
-            <!-- mid ri  -->
-            <circle cx="470" cy="250" r="15" id="circ"></circle>
-            <!-- low left -->
-            <circle cx="140" cy="440.52" r="15" id="circ"></circle>
-            <!-- low ri  -->
-            <circle cx="360" cy="440.52" r="15" id="circ"></circle>
-            
-        <svg viewBox="-125 -125 750 750" id="mid">
-            <!-- mid -->
-
-            <!-- <line x1="30" y1="250" x2="470" y2="250" stroke="white" stroke-width="2"></line>  -->
-
-            <!-- up -->
-            <line x1="140" y1="59.48" x2="360" y2="59.48" stroke="white" stroke-width="4"></line>
-            <!-- down -->
-            <line x1="140" y1="440.52" x2="360" y2="440.52" stroke="white" stroke-width="4"></line>
-
-            <line  x1="360" y1="440.52" x2="470" y2="250" stroke="white" stroke-width="4"></line>
-            <line  x1="30" y1="250" x2="140" y2="440.52" stroke="white" stroke-width="4"></line>
-            <line  x1="30" y1="250" x2="140" y2="59.48" stroke="white" stroke-width="4"></line>
-            <line  x1="360" y1="59.48" x2="470" y2="250"  stroke="white" stroke-width="4"></line>
-             <!-- up left -->
-            <circle cx="140" cy="59.48" r="20" id="circ"></circle>
-            <!-- up rig -->
-            <circle cx="360" cy="59.48" r="20" id="circ"></circle>
-            <!-- mid left -->
-            <circle cx="30" cy="250" r="20" id="circ"></circle>
-            <!-- mid ri  -->
-            <circle cx="470" cy="250" r="20" id="circ"></circle>
-            <!-- low left -->
-            <circle cx="140" cy="440.52" r="20" id="circ"></circle>
-            <!-- low ri  -->
-            <circle cx="360" cy="440.52" r="20" id="circ"></circle>
-
-            
-        </svg>
-        <svg viewBox="-375 -375 1250 1250" id="inn">
-            <!-- mid -->
-
-            <!-- <line x1="30" y1="250" x2="470" y2="250" stroke="white" stroke-width="2"></line>  -->
-
-            <!-- up -->
-            <line x1="140" y1="59.48" x2="360" y2="59.48" stroke="white" stroke-width="6"></line>
-            <!-- down -->
-            <line x1="140" y1="440.52" x2="360" y2="440.52" stroke="white" stroke-width="6"></line>
-
-            <line  x1="360" y1="440.52" x2="470" y2="250" stroke="white" stroke-width="6"></line>
-            <line  x1="30" y1="250" x2="140" y2="440.52" stroke="white" stroke-width="6"></line>
-            <line  x1="30" y1="250" x2="140" y2="59.48" stroke="white" stroke-width="6"></line>
-            <line  x1="360" y1="59.48" x2="470" y2="250"  stroke="white" stroke-width="6"></line>
-             <!-- up left -->
-            <circle cx="140" cy="59.48" r="30" id="circ"></circle>
-            <!-- up rig -->
-            <circle cx="360" cy="59.48" r="30" id="circ"></circle>
-            <!-- mid left -->
-            <circle cx="30" cy="250" r="30" id="circ"></circle>
-            <!-- mid ri  -->
-            <circle cx="470" cy="250" r="30" id="circ"></circle>
-            <!-- low left -->
-            <circle cx="140" cy="440.52" r="30" id="circ"></circle>
-            <!-- low ri  -->
-            <circle cx="360" cy="440.52" r="30" id="circ"></circle>
-
-            
-        </svg>
+      
 
 
-        </svg>
-    </div>
+      <!-- ===== MID HEXAGON ===== -->
+      <!-- Mid Hexagon Edges -->
+      <line x1="178" y1="124" x2="326" y2="124" stroke="white" stroke-width="2"/> <!-- Top edge -->
+      <line x1="178" y1="376" x2="326" y2="376" stroke="white" stroke-width="2"/> <!-- Bottom edge -->
+      <line x1="100" y1="250" x2="178" y2="124" stroke="white" stroke-width="2"/> <!-- Top left -->
+      <line x1="100" y1="250" x2="178" y2="376" stroke="white" stroke-width="2"/> <!-- Bottom left -->
+      <line x1="400" y1="250" x2="326" y2="124" stroke="white" stroke-width="2"/> <!-- Top right -->
+      <line x1="400" y1="250" x2="326" y2="376" stroke="white" stroke-width="2"/> <!-- Bottom right -->
+
+      <!-- Mid Hexagon Circles -->
+      <circle cx="178" cy="123" r="15" class="circ"/>   <!-- Mid Top Left -->
+      <circle cx="326" cy="123" r="15" class="circ"/>   <!-- Mid Top Right -->
+      <circle cx="100" cy="250" r="15" class="circ"/>   <!-- Mid Left -->
+      <circle cx="400" cy="250" r="15" class="circ"/>   <!-- Mid Right -->
+      <circle cx="174" cy="376" r="15" class="circ"/>   <!-- Mid Bottom Left -->
+      <circle cx="326" cy="376" r="15" class="circ"/>   <!-- Mid Bottom Right -->
+
+
+      <!-- ===== INNER HEXAGON (Centered at 250,250, Radius ~76) ===== -->
+      <!-- Inner Hexagon Edges -->
+      <line x1="212" y1="184" x2="288" y2="184" stroke="white" stroke-width="2"/> <!-- Top edge -->
+      <line x1="212" y1="316" x2="288" y2="316" stroke="white" stroke-width="2"/> <!-- Bottom edge -->
+      <line x1="174" y1="250" x2="212" y2="184" stroke="white" stroke-width="2"/> <!-- Top left -->
+      <line x1="174" y1="250" x2="212" y2="316" stroke="white" stroke-width="2"/> <!-- Bottom left -->
+      <line x1="326" y1="250" x2="288" y2="184" stroke="white" stroke-width="2"/> <!-- Top right -->
+      <line x1="326" y1="250" x2="288" y2="316" stroke="white" stroke-width="2"/> <!-- Bottom right -->
+
+      <!-- Inner Hexagon Circles -->
+      <circle cx="212" cy="184" r="15" class="circ"/>   <!-- Inner Top Left -->
+      <circle cx="288" cy="184" r="15" class="circ"/>   <!-- Inner Top Right -->
+      <circle cx="174" cy="250" r="15" class="circ"/>   <!-- Inner Left -->
+      <circle cx="326" cy="250" r="15" class="circ"/>   <!-- Inner Right -->
+      <circle cx="212" cy="316" r="15" class="circ"/>   <!-- Inner Bottom Left -->
+      <circle cx="288" cy="316" r="15" class="circ"/>   <!-- Inner Bottom Right -->
+
+    </svg>
+  </div>
+  <script src="java.js"></script>
 </body>
 </html>
